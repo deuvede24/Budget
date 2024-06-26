@@ -1,6 +1,46 @@
-<p>home works!</p>
-<!-- home.component.html -->
 
+<!-- home.component.html 
 
-<app-panel></app-panel>
+<div class="container mt-5">
+    <h2>Selecciona els serveis que necessites</h2>
+    <form [formGroup]="budgetForm">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" formControlName="seo" id="seo">
+        <label class="form-check-label" for="seo">Fer una campanya SEO (300 €)</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" formControlName="advertising" id="advertising">
+        <label class="form-check-label" for="advertising">Fer una campanya de publicitat (400 €)</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" formControlName="website" id="website">
+        <label class="form-check-label" for="website">Fer una pàgina web (500 €)</label>
+      </div>
+    </form>
+    <div class="mt-3">
+      <h4>Pressupost Total: {{ totalBudget }} €</h4>
+    </div>
+  </div>
+  
+<app-panel></app-panel>-->
+
+<div class="container mt-5">
+    <h2>Selecciona els serveis que necessites</h2>
+    <form [formGroup]="budgetForm">
+      @for (service of services; track service.controlName) {
+        <div class="card m-3">
+          <div class="card-body">
+            <input class="form-check-input" type="checkbox" [formControlName]="service.controlName" [id]="service.controlName">
+            <label class="form-check-label" [for]="service.controlName">{{ service.label }}</label>
+          </div>
+        </div>
+      }
+    </form>
+    <app-panel></app-panel>
+    <div class="mt-3">
+      <h4>Pressupost Total: {{ totalBudget }} €</h4>
+    </div>
+  </div>
+  
+  
 
