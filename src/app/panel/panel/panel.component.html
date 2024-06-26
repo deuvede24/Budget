@@ -2,7 +2,7 @@
 <!-- panel.component.html -->
 <app-modal></app-modal>
 
-<mat-card>
+<!--<mat-card>
     <form [formGroup]="budgetForm">
       <mat-checkbox formControlName="seo">Fer una campanya SEO (300 €)</mat-checkbox>
       <mat-checkbox formControlName="advertising">Fer una campanya de publicitat (400 €)</mat-checkbox>
@@ -12,6 +12,31 @@
       <h4>Pressupost Total: {{ totalBudget }} €</h4>
     </div>
   </mat-card>
-  <app-modal></app-modal>
+  <app-modal></app-modal>-->
+
+  
+  
+  
+  <div class="card">
+    <div class="card-body">
+      <form [formGroup]="budgetForm">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="seo" id="seo">
+          <label class="form-check-label" for="seo">Fer una campanya SEO (300 €)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="advertising" id="advertising">
+          <label class="form-check-label" for="advertising">Fer una campanya de publicitat (400 €)</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="website" id="website">
+          <label class="form-check-label" for="website">Fer una pàgina web (500 €)</label>
+        </div>
+      </form>
+      <div class="mt-3">
+        <h4>Pressupost Total: {{ totalBudget }} €</h4>
+      </div>
+    </div>
+  </div>
   
   

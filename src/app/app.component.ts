@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WelcomeComponent } from './shared/welcome/welcome/welcome.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 import { HomeComponent } from './home/home/home.component';
+
 
 
 @Component({
@@ -14,5 +15,6 @@ import { HomeComponent } from './home/home/home.component';
 export class AppComponent {
   title = 'Budget';
 }
+
 
 

@@ -23,8 +23,8 @@ export class PanelComponent {
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatCardModule } from '@angular/material/card';
+//import { MatCheckboxModule } from '@angular/material/checkbox';
+//import { MatCardModule } from '@angular/material/card';
 import { ModalComponent } from './../../shared/modal/modal/modal.component';
 import { BudgetService } from '../../services/budget.service';
 
@@ -33,7 +33,8 @@ import { BudgetService } from '../../services/budget.service';
   templateUrl: './panel.component.html',
   styleUrls: ['./panel.component.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatCheckboxModule, MatCardModule, ModalComponent]
+  //imports: [CommonModule, ReactiveFormsModule, MatCheckboxModule, MatCardModule, ModalComponent]
+  imports: [CommonModule, ReactiveFormsModule, ModalComponent]
 })
 export class PanelComponent {
   budgetForm: FormGroup;
@@ -46,10 +47,14 @@ export class PanelComponent {
       website: false
     });
 
+    
     this.budgetForm.valueChanges.subscribe(values => {
       this.totalBudget = this.budgetService.calculateBudget(values);
     });
   }
 }
+
+
+
 
 
