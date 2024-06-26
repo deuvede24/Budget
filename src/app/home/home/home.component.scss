@@ -1,6 +1,4 @@
-.container {
-    padding: 20px;
-  }
+
   
   .form-check {
     margin-bottom: 10px;
@@ -12,7 +10,49 @@
     font-weight: bold;
   }
   
-  .card {
+ /* .card {
     margin-bottom: 10px;
+  }*/
+  
+  
+
+  .container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  .form-check-input {
+    margin-right: 0.5rem;
+  }
+  
+  .text-end {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   
