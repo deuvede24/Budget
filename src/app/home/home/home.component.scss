@@ -1,6 +1,4 @@
-
-  
-  .form-check {
+/*.form-check {
     margin-bottom: 10px;
   }
   
@@ -8,15 +6,15 @@
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: bold;
-  }
-  
- /* .card {
+  }*/
+
+/* .card {
     margin-bottom: 10px;
   }*/
-  
-  
 
-  .container {
+
+
+/*.container {
     margin-top: 20px;
   }
   
@@ -54,5 +52,151 @@
     margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
+  }*/
+
+//
+
+
+.container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  padding: 0.5rem;
+  max-width: 900px;
+  /* Ajustamos el ancho máximo */
+  width: 100%;
+  /* Aseguramos que tome todo el ancho posible */
+}
+
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: fit-content;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+  max-width: 300px;
+  /* Ancho máximo para la descripción */
+  word-wrap: break-word;
+  /* Ajusta el texto para que pase a la siguiente línea */
+  margin-right: 2rem;
+}
+
+.text-primary {
+  color: #6a1b9a !important;
+  /* Color lila */
+}
+
+.price-container {
+  display: inline-flex;
+  align-items: baseline;
+  margin-right: 2rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  /* Tamaño del precio */
+  margin-right: 0.2rem;
+  /* Espaciado entre el precio y el símbolo de euro */
+}
+
+/*.euro {
+  font-size: 1.5rem;
+  /* Tamaño del símbolo de euro 
+}*/
+
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+.form-check-input {
+  border: 2px solid #4c4b4b;
+  /* Contorno negro */
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #fff;
+  /* Fondo blanco */
+  -webkit-appearance: none;
+  /* Quita el estilo por defecto de los navegadores */
+  appearance: none;
+  /* Quita el estilo por defecto de los navegadores */
+  border-radius: 0.25rem;
+  /* Esquinas redondeadas */
+  margin-left: 2rem;
+}
+
+.form-check-input:checked {
+  background-color: #6a1b9a;
+  /* Color de fondo cuando está seleccionado */
+}
+
+.form-check-label {
+  margin-left: 0.5rem;
+}
+
+.text-end {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/*@media (max-width: 768px) {
+  .card-body {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
+ // .card-text,
+  //.card-title,
+  .price-container,
+  .form-check {
+    margin-top: 1rem;
+  }
+
+  .form-check {
+    flex-direction: row;
+    align-items: center;
+  }
+}*/
+
+@media (max-width: 768px) {
+  .card-body {
+    flex-direction: column;
+    align-items: center; /* Centramos los elementos */
+    text-align: center; /* Centramos el texto */
+  }
+
+  .price-container,
+  .form-check {
+    margin-top: 1rem;
+  }
+
+  .form-check {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centramos el checkbox y el label */
+  }
+
+  .card-text {
+    margin-right: 0; /* Eliminamos el margen derecho en dispositivos pequeños */
+    max-width: 100%; /* Permitimos que el texto ocupe todo el ancho */
+  }
+}

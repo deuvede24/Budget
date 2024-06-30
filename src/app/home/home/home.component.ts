@@ -55,9 +55,9 @@ export class HomeComponent implements OnInit {
   budgetForm: FormGroup;
   totalBudget: number = 0;
   services = [
-    { controlName: 'seo', label: 'SEO (300 €)', description: 'Programació de una web responsive completa', price: 300 },
-    { controlName: 'advertising', label: 'ADS (400 €)', description: 'Programació de una web responsive completa', price: 400 },
-    { controlName: 'website', label: 'WEB (500 €)', description: 'Programació de una web responsive completa', price: 500 }
+    { controlName: 'seo', label: 'SEO', description: 'Programación de una web responsive completa', price: 300 },
+    { controlName: 'advertising', label: 'ADS', description: 'Programación de una web responsive completa', price: 400 },
+    { controlName: 'website', label: 'WEB', description: 'Programación de una web responsive completa', price: 500 }
   ];
 
   constructor(private fb: FormBuilder, private budgetService: BudgetService) {
