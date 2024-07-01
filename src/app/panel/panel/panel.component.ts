@@ -1,26 +1,6 @@
+
+
 /*import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
-import { ModalComponent } from './../../shared/modal/modal/modal.component';
-import { BudgetService } from '../../services/budget.service';
-
-
-@Component({
-  selector: 'app-panel',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, ModalComponent],
-  templateUrl: './panel.component.html',
-  styleUrl: './panel.component.scss'
-})
-export class PanelComponent {
-  constructor(private budgetService: BudgetService) {}
-}
-*/
-
-//BudgetService
-
-
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 //import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -52,40 +32,101 @@ export class PanelComponent {
       this.totalBudget = this.budgetService.calculateBudget(values);
     });
   }
-}
+}*/
 
-/*import { Component } from '@angular/core';
+
+// 
+/*import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 import { BudgetService } from '../../services/budget.service';
 
 @Component({
   selector: 'app-panel',
-  templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule]
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './panel.component.html',
+  styleUrls: ['./panel.component.scss']
 })
-export class PanelComponent {
-  budgetForm: FormGroup;
-  totalBudget: number = 0;
+export class PanelComponent implements OnInit {
+  panelForm: FormGroup;
 
   constructor(private fb: FormBuilder, private budgetService: BudgetService) {
-    this.budgetForm = this.fb.group({
-      seo: false,
-      advertising: false,
-      website: false
+    this.panelForm = this.fb.group({
+      numPages: [1, [Validators.min(1)]],
+      numLanguages: [1, [Validators.min(1)]]
     });
+  }
 
-    this.budgetForm.valueChanges.subscribe(values => {
-      this.totalBudget = this.budgetService.calculateBudget(values);
-    });
+  ngOnInit(): void {}
+
+  incrementPages() {
+    const currentPages = this.panelForm.controls['numPages'].value;
+    this.panelForm.controls['numPages'].setValue(currentPages + 1);
+  }
+
+  decrementPages() {
+    const currentPages = this.panelForm.controls['numPages'].value;
+    if (currentPages > 1) {
+      this.panelForm.controls['numPages'].setValue(currentPages - 1);
+    }
+  }
+
+  incrementLanguages() {
+    const currentLanguages = this.panelForm.controls['numLanguages'].value;
+    this.panelForm.controls['numLanguages'].setValue(currentLanguages + 1);
+  }
+
+  decrementLanguages() {
+    const currentLanguages = this.panelForm.controls['numLanguages'].value;
+    if (currentLanguages > 1) {
+      this.panelForm.controls['numLanguages'].setValue(currentLanguages - 1);
+    }
   }
 }*/
 
 
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
+@Component({
+  selector: 'app-panel',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './panel.component.html',
+  styleUrls: ['./panel.component.scss']
+})
+export class PanelComponent {
+  @Input() numPages: number = 1;
+  @Output() numPagesChange = new EventEmitter<number>();
 
+  @Input() numLanguages: number = 1;
+  @Output() numLanguagesChange = new EventEmitter<number>();
 
+  incrementPages() {
+    this.numPages += 1;
+    this.numPagesChange.emit(this.numPages);
+  }
+
+  decrementPages() {
+    if (this.numPages > 1) {
+      this.numPages -= 1;
+      this.numPagesChange.emit(this.numPages);
+    }
+  }
+
+  incrementLanguages() {
+    this.numLanguages += 1;
+    this.numLanguagesChange.emit(this.numLanguages);
+  }
+
+  decrementLanguages() {
+    if (this.numLanguages > 1) {
+      this.numLanguages -= 1;
+      this.numLanguagesChange.emit(this.numLanguages);
+    }
+  }
+}
 
 

@@ -2,8 +2,41 @@
 <!-- panel.component.html -->
 <!--<app-modal></app-modal>-->
 
+<!--iv class="panel">
+    <div>
+      <label for="numPages">Número de Páginas:</label>
+      <button (click)="decrementPages()">-</button>
+      <input id="numPages" type="number" [formControl]="panelForm.controls['numPages']" min="1">
+      <button (click)="incrementPages()">+</button>
+    </div>
+    <div>
+      <label for="numLanguages">Número de Idiomas:</label>
+      <button (click)="decrementLanguages()">-</button>
+      <input id="numLanguages" type="number" [formControl]="panelForm.controls['numLanguages']" min="1">
+      <button (click)="incrementLanguages()">+</button>
+    </div>
+  </div>-->
 
 
+  <div class="panel">
+    <div class="form-group">
+      <label for="numPages">Número de Páginas:</label>
+      <div class="input-group">
+        <button class="btn btn-lila" (click)="decrementPages()">-</button>
+        <input id="numPages" type="number" class="form-control" [(ngModel)]="numPages" min="1">
+        <button class="btn btn-lila" (click)="incrementPages()">+</button>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="numLanguages">Número de Idiomas:</label>
+      <div class="input-group">
+        <button class="btn btn-lila" (click)="decrementLanguages()">-</button>
+        <input id="numLanguages" type="number" class="form-control" [(ngModel)]="numLanguages" min="1">
+        <button class="btn btn-lila" (click)="incrementLanguages()">+</button>
+      </div>
+    </div>
+  </div>
   
-
+  
+  
   

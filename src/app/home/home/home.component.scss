@@ -200,3 +200,17 @@
     max-width: 100%; /* Permitimos que el texto ocupe todo el ancho */
   }
 }
+
+.container {
+  position: relative;
+}
+
+.app-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+//

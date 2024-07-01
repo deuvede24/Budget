@@ -3,11 +3,117 @@
   .form-check {
     margin-bottom: 10px;
   }
+
+
+ /* .panel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+  }*/
+  
+ /* .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alineamos los elementos al final *
+    margin-bottom: 10px;
+    width: 100%; /* Ajusta el ancho al 100% *
+  }*/
+  
+  .form-group label {
+    margin-right: 10px;
+    white-space: nowrap; /* Evita que el texto haga un salto de línea */
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+  }
+  
+ /* .input-group button {
+    margin: 0 5px;
+  }*/
+  
+  .input-group input {
+    max-width: 60px; /* Ajusta este valor según sea necesario */
+  }
+  
   .total-budget {
     margin-top: 20px;
     font-size: 1.2em;
     font-weight: bold;
   }
+  
+ /* .input-group {
+    display: flex;
+    align-items: center;
+  }*/
+  
+ /* .input-group .btn {
+    background-color: #6a1b9a; /* Color lila *
+    color: #ffffff; /* Texto blanco *
+    border: 1px solid #6a1b9a; /* Borde lila *
+    border-radius: 30%; /* Botones redondos *
+    width: 10px; /* Ancho del botón *
+    height: 10px; /* Alto del botón *
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Eliminar padding extra *
+  }*/
+  
+  .input-group .btn:focus,
+  .input-group .btn:hover {
+    background-color: #5a008a; /* Color más oscuro al pasar el ratón */
+    border-color: #5a008a;
+  }
+  
+  /*.input-group .form-control {
+    border: 1px solid #6a1b9a; /* Borde lila *
+    border-radius: 0.25rem; /* Bordes ligeramente redondeados *
+    width: 50px; /* Ancho del input *
+    text-align: center; /* Centrar el texto *
+  }*/
+  
+  
+  .panel {
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 10px;
+  
+      .input-group {
+        display: flex;
+        align-items: center;
+  
+        .btn {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          margin: 0 5px;
+          background-color: #6a1b9a; /* Color lila */
+          color: #fff;
+  
+          &:hover {
+            background-color: #5c1584; /* Un tono más oscuro para el hover */
+          }
+        }
+  
+        .form-control {
+          width: 60px; /* Ajusta este valor según sea necesario */
+          text-align: center;
+          border: 2px solid #000000;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  
   
   
   
