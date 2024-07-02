@@ -86,7 +86,8 @@ export class PanelComponent implements OnInit {
 }*/
 
 
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+//CHECK 
+/*import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -127,6 +128,58 @@ export class PanelComponent {
       this.numLanguagesChange.emit(this.numLanguages);
     }
   }
+}*/
+
+import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms'; // Asegúrate de importar ReactiveFormsModule
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-panel',
+  templateUrl: './panel.component.html',
+  styleUrls: ['./panel.component.scss'],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule], // Importa CommonModule y ReactiveFormsModule
+})
+export class PanelComponent implements OnInit {
+  @Input() parentForm!: FormGroup; // Usar '!' para indicar que será inicializado
+
+  constructor() {}
+
+  //ngOnInit(): void {}
+
+  ngOnInit(): void {
+    // Inicializar los valores si no están presentes
+    if (!this.parentForm.controls['numPages'].value) {
+      this.parentForm.controls['numPages'].setValue(1);
+    }
+    if (!this.parentForm.controls['numLanguages'].value) {
+      this.parentForm.controls['numLanguages'].setValue(1);
+    }
+  }
+
+
+  incrementPages() {
+    const currentPages = this.parentForm.controls['numPages'].value;
+    this.parentForm.controls['numPages'].setValue(currentPages + 1);
+  }
+
+  decrementPages() {
+    const currentPages = this.parentForm.controls['numPages'].value;
+    if (currentPages > 1) {
+      this.parentForm.controls['numPages'].setValue(currentPages - 1);
+    }
+  }
+
+  incrementLanguages() {
+    const currentLanguages = this.parentForm.controls['numLanguages'].value;
+    this.parentForm.controls['numLanguages'].setValue(currentLanguages + 1);
+  }
+
+  decrementLanguages() {
+    const currentLanguages = this.parentForm.controls['numLanguages'].value;
+    if (currentLanguages > 1) {
+      this.parentForm.controls['numLanguages'].setValue(currentLanguages - 1);
+    }
+  }
 }
-
-
