@@ -142,7 +142,8 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, ReactiveFormsModule], // Importa CommonModule y ReactiveFormsModule
 })
 export class PanelComponent implements OnInit {
-  @Input() parentForm!: FormGroup; // Usar '!' para indicar que será inicializado
+  //@Input() parentForm!: FormGroup; // Usar '!' para indicar que será inicializado
+  @Input() parentForm: FormGroup = new FormGroup({});
 
   constructor() {}
 

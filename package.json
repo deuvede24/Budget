@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:chrome": "ng test --browsers Chrome",
+    "test:chromium": "ng test --browsers Chromium"
   },
   "private": true,
   "dependencies": {
