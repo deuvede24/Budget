@@ -1,7 +1,132 @@
-<p>budgets-list works!</p>
-<!-- budgets-list.component.html -->
-<div>
-    <h2>Lista de Presupuestos</h2>
-    <!-- Aquí irán los elementos de la lista de presupuestos -->
+
+<!--<div>
+  <h3>Current Budgets</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Services</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (budget of budgets; track budget.clientName) {
+        <tr>
+          <td>{{ budget.clientName }}</td>
+          <td>{{ budget.phone }}</td>
+          <td>{{ budget.email }}</td>
+          <td>{{ budget.services }}</td>
+          <td>{{ budget.totalPrice }} €</td>
+
+          
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>-->
+
+<!--<div>
+  <h3>Current Budgets</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Client Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Services</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (budget of budgets; track budget.clientName) {
+        <tr>
+          <td>{{ budget.clientName }}</td>
+          <td>{{ budget.phone }}</td>
+          <td>{{ budget.email }}</td>
+          <td>
+            <ul>
+              @if (budget.services.seo) { <li>SEO</li> }
+              @if (budget.services.advertising) { <li>Advertising</li> }
+              @if (budget.services.website) { <li>Website</li> }
+              @if (budget.services.numPages) { <li>Number of Pages: {{ budget.services.numPages }}</li> }
+              @if (budget.services.numLanguages) { <li>Number of Languages: {{ budget.services.numLanguages }}</li> }
+            </ul>
+          </td>
+          <td>{{ budget.totalPrice }} €</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>-->
+
+<!--<div class="container mt-5">
+  <h3>Current Quotes</h3>
+  <div class="row">
+    @for (budget of budgets; track budget.clientName) {
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ budget.clientName }}</h5>
+            <p class="card-text">
+              <strong>Phone:</strong> {{ budget.phone }}<br>
+              <strong>Email:</strong> {{ budget.email }}<br>
+              <strong>Services:</strong>
+            </p>
+            <ul>
+              @if (budget.services.seo) { <li>SEO</li> }
+              @if (budget.services.advertising) { <li>Advertising</li> }
+              @if (budget.services.website) { <li>Website</li> }
+              @if (budget.services.numPages) { <li>Number of Pages: {{ budget.services.numPages }}</li> }
+              @if (budget.services.numLanguages) { <li>Number of Languages: {{ budget.services.numLanguages }}</li> }
+            </ul>
+            <p class="card-text">
+              <strong>Total Price:</strong> {{ budget.totalPrice }} €
+            </p>
+          </div>
+        </div>
+      </div>
+    }
   </div>
+</div>-->
+
+<div class="container mt-5">
+  <h3>Current Quotes</h3>
+
+  <!-- Botones de ordenación -->
+  <div class="mb-3">
+    <button class="btn btn-lila me-2" (click)="sortByDate()">Sort by Date</button>
+    <button class="btn btn-lila me-2" (click)="sortByPrice()">Sort by Price</button>
+    <button class="btn btn-lila" (click)="sortByName()">Sort by Name</button>
+  </div>
+
+  <div class="row">
+    @for (budget of budgets; track budget.clientName) {
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{ budget.clientName }}</h5>
+            <p class="card-text">
+              <strong>Phone:</strong> {{ budget.phone }}<br>
+              <strong>Email:</strong> {{ budget.email }}<br>
+              <strong>Services:</strong>
+            </p>
+            <ul>
+              @if (budget.services.seo) { <li>SEO</li> }
+              @if (budget.services.advertising) { <li>Advertising</li> }
+              @if (budget.services.website) { <li>Website</li> }
+              @if (budget.services.numPages) { <li>Number of Pages: {{ budget.services.numPages }}</li> }
+              @if (budget.services.numLanguages) { <li>Number of Languages: {{ budget.services.numLanguages }}</li> }
+            </ul>
+            <p class="card-text">
+              <strong>Total Price:</strong> {{ budget.totalPrice }} €
+            </p>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>
+
   
