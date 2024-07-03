@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BudgetsListComponent } from './../../../budgets-list/budgets-list/budgets-list.component';
 
@@ -10,6 +10,8 @@ import { BudgetsListComponent } from './../../../budgets-list/budgets-list/budge
   styleUrl: './modal.component.scss'
 })
 export class ModalComponent {
-
+  @Input() modalId: string = '';
+  @Input() modalTitle: string = '';
+  @Input() modalBody: string = '';
 }
 

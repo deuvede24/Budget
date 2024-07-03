@@ -201,9 +201,9 @@ export class HomeComponent implements OnInit {
   totalBudget: number = 0;
   showPanel: boolean = false;
   services = [
-    { controlName: 'seo', label: 'SEO', description: 'Programación de una web responsive completa', price: 300 },
-    { controlName: 'advertising', label: 'ADS', description: 'Programación de una web responsive completa', price: 400 },
-    { controlName: 'website', label: 'WEB', description: 'Programación de una web responsive completa', price: 500 }
+    { controlName: 'seo', label: 'SEO', description: 'Complete responsive web programming', price: 300 },
+    { controlName: 'advertising', label: 'ADS', description: 'Complete responsive web programming', price: 400 },
+    { controlName: 'website', label: 'WEB', description: 'Complete responsive web programming', price: 500 }
   ];
 
   constructor(private fb: FormBuilder, private budgetService: BudgetService) {

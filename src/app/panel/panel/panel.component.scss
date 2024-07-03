@@ -1,23 +1,15 @@
 .form-check {
   margin-bottom: 10px;
 }
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.flex-label {
+  flex: 1;
+  min-width: 150px; /* Ajusta este valor según sea necesario */
+}
 
-
-/* .panel {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 1rem;
-  }*/
-
-/* .form-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Alineamos los elementos al final *
-    margin-bottom: 10px;
-    width: 100%; /* Ajusta el ancho al 100% *
-  }*/
 
 .form-group label {
   margin-right: 10px;
@@ -37,6 +29,7 @@
 .input-group input {
   max-width: 60px;
   /* Ajusta este valor según sea necesario */
+  
 }
 
 .total-budget {
@@ -90,8 +83,8 @@
       align-items: center;
 
       .btn {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -136,16 +129,14 @@
   /* Borde negro */
   border-radius: 50%;
   /* Botón redondo */
-  padding: 5px;
-  /* Añadir padding */
+  width: 30px; /* Ancho del botón */
+  height: 30px; /* Alto del botón */
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
 
   i {
-    font-size: 16px;
+    font-size: 14px;
     /* Tamaño de la 'i' */
   }
 
@@ -161,4 +152,15 @@ label {
   white-space: nowrap;
   /* Evita que el texto haga un salto de línea */
 }
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+.flex-label {
+  flex: 1;
+  min-width: 150px; /* Ajusta este valor según sea necesario */
+}
+
+
 
