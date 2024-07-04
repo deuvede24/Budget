@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-welcome',
   standalone: true,
   imports: [CommonModule],
- // imports: [CommonModule, HomeComponent],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss'
 })

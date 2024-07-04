@@ -219,13 +219,10 @@ export class BudgetService {
     return total;
   }
 
-  /*addBudget(budget: Budget): void {
-    const currentBudgets = this.budgetsSubject.value;
-    this.budgetsSubject.next([...currentBudgets, budget]);
-  }*/
+
   addBudget(budget: Budget): void {
     const currentBudgets = this.budgetsSubject.value;
-    const newBudget = { ...budget, date: new Date().toISOString() }; // Add date here
+    const newBudget = { ...budget, date: new Date().toISOString() }; // Add fecha válida
     this.budgetsSubject.next([...currentBudgets, newBudget]);
   }
 

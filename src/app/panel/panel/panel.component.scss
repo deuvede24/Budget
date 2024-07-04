@@ -7,14 +7,12 @@
 }
 .flex-label {
   flex: 1;
-  min-width: 150px; /* Ajusta este valor según sea necesario */
+  min-width: 150px; 
 }
-
 
 .form-group label {
   margin-right: 10px;
-  white-space: nowrap;
-  /* Evita que el texto haga un salto de línea */
+  white-space: nowrap; /* Evita el salto de línea */
 }
 
 .input-group {
@@ -22,14 +20,8 @@
   align-items: center;
 }
 
-/* .input-group button {
-    margin: 0 5px;
-  }*/
-
 .input-group input {
-  max-width: 60px;
-  /* Ajusta este valor según sea necesario */
-  
+  max-width: 60px; 
 }
 
 .total-budget {
@@ -38,38 +30,11 @@
   font-weight: bold;
 }
 
-/* .input-group {
-    display: flex;
-    align-items: center;
-  }*/
-
-/* .input-group .btn {
-    background-color: #6a1b9a; /* Color lila *
-    color: #ffffff; /* Texto blanco *
-    border: 1px solid #6a1b9a; /* Borde lila *
-    border-radius: 30%; /* Botones redondos *
-    width: 10px; /* Ancho del botón *
-    height: 10px; /* Alto del botón *
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0; /* Eliminar padding extra *
-  }*/
-
 .input-group .btn:focus,
 .input-group .btn:hover {
   background-color: #5a008a;
-  /* Color más oscuro al pasar el ratón */
   border-color: #5a008a;
 }
-
-/*.input-group .form-control {
-    border: 1px solid #6a1b9a; /* Borde lila *
-    border-radius: 0.25rem; /* Bordes ligeramente redondeados *
-    width: 50px; /* Ancho del input *
-    text-align: center; /* Centrar el texto *
-  }*/
-
 
 .panel {
   .form-group {
@@ -91,28 +56,22 @@
         border-radius: 50%;
         margin: 0 5px;
         background-color: #6a1b9a;
-        /* Color lila */
         color: #fff;
 
         &:hover {
           background-color: #5c1584;
-          /* Un tono más oscuro para el hover */
         }
       }
 
 
       .form-control {
         width: 60px;
-        /* Ajusta este valor según sea necesario */
         text-align: center;
         border: 2px solid #000000;
         border-radius: 10px;
         color: #000;
-        /* Asegúrate de que el texto sea negro */
         background-color: #fff;
-        /* Fondo blanco */
-        pointer-events: none;
-        /* Evita la interacción del usuario */
+        pointer-events: none; /* Evita la interacción del usuario */
       }
     }
   }
@@ -122,35 +81,28 @@
 
 .btn-info {
   background-color: #ffffff;
-  /* Fondo blanco */
   color: #000000;
-  /* Texto negro */
   border: 2px solid #000000;
-  /* Borde negro */
   border-radius: 50%;
   /* Botón redondo */
-  width: 30px; /* Ancho del botón */
-  height: 30px; /* Alto del botón */
+  width: 30px;
+  height: 30px; 
   display: flex;
   align-items: center;
   justify-content: center;
 
   i {
     font-size: 14px;
-    /* Tamaño de la 'i' */
   }
 
   &:hover {
     background-color: #f0f0f0;
-    /* Color más oscuro al pasar el ratón */
   }
 }
 
 label {
   margin-left: 10px;
-  /* Espacio a la derecha del botón */
   white-space: nowrap;
-  /* Evita que el texto haga un salto de línea */
 }
 
 .flex-container {
@@ -159,7 +111,7 @@ label {
 }
 .flex-label {
   flex: 1;
-  min-width: 150px; /* Ajusta este valor según sea necesario */
+  min-width: 150px; 
 }
 
 
