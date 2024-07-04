@@ -269,7 +269,7 @@ export class HomeComponent implements OnInit {
 
     this.clientForm = this.fb.group({
       clientName: ['', Validators.required],
-      phone: ['', Validators.required],
+      phone: ['', Validators.required,],
       email: ['', [Validators.required, Validators.email]]
     });
 
